@@ -6,7 +6,7 @@
 
 **TLS：（Transport Layer Security，传输层安全协议）**，用于两个应用程序之间提供保密性和数据完整性。该协议由两层组成：TLS记录协议和TLS握手协议
 
-![img](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560578056160&di=7608d5c86372de2fb332f0e3eed07ee4&imgtype=0&src=http%3A%2F%2Fs8.sinaimg.cn%2Fmw690%2F001WsA2Zgy71UwrWKMvd7%26690)
+![image-20190617090343230](http://ww4.sinaimg.cn/large/006tNc79ly1g43vlimmsvj31240kgh3d.jpg)
 
 **区别和联系**
 
@@ -189,7 +189,7 @@ Root 根证书从何而来呢？除了自行下载安装之外，**浏览器、�
 
 
 
-####**SSL/TLS **
+#### **SSL/TLS **
 
 不使用SSL/TLS的通信，就是不加密的通信。所有信息明文传播，带来了三大风险。
 
@@ -243,7 +243,7 @@ TLS 在实现上分为 **记录层** 和 **握手层** 两层，其中握手层�
 2.  alert协议，the alert protocol, 用来通知各种返回码，
 3.  application data协议， The application data protocol，就是把http，smtp等的数据流传入record层做处理并传输。
 
-![TLS 详解](https:////img1.3s78.com/codercto/8dcd1b7cef1310c1373a5db304d58c7a)
+![image-20190617090520105](http://ww4.sinaimg.cn/large/006tNc79ly1g43vn2qoixj30v80dmwi5.jpg)
 
 ### **握手协议** (handshake protocol)
 
@@ -371,7 +371,7 @@ master_secret = PRF(pre_master_secret,ClientHello.random + ServerHello.random);
 
 ####**RSA握手**
 
-![img](http://www.ruanyifeng.com/blogimg/asset/2014/bg2014092003.png)
+​	![image-20190617090633930](http://ww1.sinaimg.cn/large/006tNc79ly1g43voe47ucj314b0u0nm9.jpg)
 
 RSA有一个问题，就是如果私钥泄漏，即私钥被第三方知道，那么第三方就能从密码协商过程中解密得到整个通讯秘钥，即只要保存爱丽丝和鲍勃之间所有通讯的报文，等到私钥被泄漏的那一天，那么爱丽丝和鲍勃就没有什么私密性可言了。
 
@@ -421,7 +421,7 @@ Session ID是目前所有浏览器都支持的方法，但是它的缺点在于S
 
 记录协议负责在传输连接上交换的所有底层消息，并且可以配置加密。每一条 TLS 记录以一个短标头开始。标头包含记录内容的类型 (或子协议)、协议版本和长度。原始消息经过分段 (或者合并)、压缩、添加认证码、加密转为 TLS 记录的数据部分。
 
-![TLS 详解](https:////img1.3s78.com/codercto/8287cf944eb8a5a4a31e5a3c0f5e23ef)
+![image-20190617090728045](http://ww4.sinaimg.cn/large/006tNc79gy1g43vp9mm79j30vo0mc43y.jpg)
 
 
 
